@@ -1,4 +1,4 @@
-var fs = require("fs"),
+var fs = require(process.versions.electron ? "original-fs" : "fs"),
     pth = require('path');
 
 fs.existsSync = fs.existsSync || pth.existsSync;
